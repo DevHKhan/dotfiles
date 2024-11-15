@@ -1,0 +1,65 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=false
+separator_block_width=0
+
+[ssd]
+color=#ff0000
+command=$HOME/freespace.sh
+interval=repeat
+
+[ssdc]
+color=#ff0000
+full_text=GB SSD
+command=alacritty -e btop
+interval=0
+
+[ssdb]
+command=echo " | "
+interval=once
+
+[usedram]
+command=$HOME/usedram.sh
+color=#ffb900
+interval=repeat
+
+[usedramc]
+color=#ffb900
+full_text=GB RAM in use
+command=alacritty -e btop
+interval=0
+
+[usedramb]
+command=echo " | "
+interval=once
+
+[freeram]
+color=#0097ff
+command=$HOME/freeram.sh
+interval=repeat
+
+[freeramc]
+full_text=GB RAM free
+color=#0097ff
+command=alacritty -e btop
+interval=0
+
+[freeramb]
+command=echo " | "
+interval=once
+
+[time]
+color=#00ff0c
+command=date "+%D %l:%M %p %a"
+interval=repeat
+
+[timeb]
+command=echo " |"
+interval=once
