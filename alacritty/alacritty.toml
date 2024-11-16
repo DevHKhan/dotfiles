@@ -1,0 +1,14 @@
+[cursor]
+blink_interval = 500
+blink_timeout = 0
+unfocused_hollow = false
+thickness = 0.15
+style = {shape = "Beam", blinking = "Always"}
+
+[general]
+import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/github_dark_default.toml"
+]
+
+[window]
+dynamic_title = true
