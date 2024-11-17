@@ -15,29 +15,36 @@ color=#ff0000
 command=$HOME/freespace.sh
 interval=repeat
 
-[ssdc]
+[ssd_clickable]
 color=#ff0000
-full_text=GB SSD
+full_text=GB 💾
 command=alacritty -e btop
 interval=0
 
-[ssdb]
+[ssd_sep]
+command=echo " | "
+interval=once
+
+[pkgs]
+command=echo "$(checkupdates | wc -l) "
+interval=repeat
+
+[pkgs_clickable]
+full_text=📦
+command=alacritty -e sudo pacman -Syu
+interval=0
+
+[pkgs_sep]
 command=echo " | "
 interval=once
 
 [usedram]
-command=$HOME/usedram.sh
+command=echo "$($HOME/usedram.sh)GB"
 color=#ffb900
 interval=repeat
 
-[usedramc]
-color=#ffb900
-full_text=GB RAM in use
-command=alacritty -e btop
-interval=0
-
-[usedramb]
-command=echo " | "
+[usedram_sep]
+command=echo " ¦ "
 interval=once
 
 [freeram]
@@ -45,13 +52,13 @@ color=#0097ff
 command=$HOME/freeram.sh
 interval=repeat
 
-[freeramc]
-full_text=GB RAM free
+[freeram_clickable]
+full_text=GB ⚡
 color=#0097ff
 command=alacritty -e btop
 interval=0
 
-[freeramb]
+[freeram_sep]
 command=echo " | "
 interval=once
 
@@ -60,6 +67,6 @@ color=#00ff0c
 command=date "+%D %l:%M %p %a"
 interval=repeat
 
-[timeb]
+[time_sep]
 command=echo " |"
 interval=once
