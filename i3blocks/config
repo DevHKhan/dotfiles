@@ -26,8 +26,9 @@ command=echo " | "
 interval=once
 
 [pkgs]
+color=#0097ff
 command=echo "$(checkupdates | wc -l) "
-interval=repeat
+interval=43200
 
 [pkgs_clickable]
 full_text=📦
@@ -38,13 +39,42 @@ interval=0
 command=echo " | "
 interval=once
 
+[aur-update]
+command=$HOME/aur-update.py
+markup=pango
+format=json
+interval=43200
+UPDATE_COLOR=#ffb900
+QUIET=1
+IGNORE=root vidyodesktop
+CACHE_UPDATES=0
+#FORCE_IPV4=1
+
+[aur-update_sep]
+command=echo " | "
+interval=once
+
+[usedcpu]
+color=#00ff0c
+command=echo "$($HOME/cpu.sh) "
+interval=repeat
+
+[usedcpu_clickable]
+full_text=🔲
+command=alacritty -e btop
+interval=0
+
+[usedcpu_sep]
+command=echo " | "
+interval=once
+
 [usedram]
 command=echo "$($HOME/usedram.sh)GB"
 color=#ffb900
 interval=repeat
 
 [usedram_sep]
-command=echo " ¦ "
+command=echo " / "
 interval=once
 
 [freeram]
@@ -53,8 +83,8 @@ command=$HOME/freeram.sh
 interval=repeat
 
 [freeram_clickable]
-full_text=GB ⚡
 color=#0097ff
+full_text=GB ⚡
 command=alacritty -e btop
 interval=0
 
@@ -68,5 +98,14 @@ command=date "+%D %l:%M %p %a"
 interval=repeat
 
 [time_sep]
-command=echo " |"
+command=echo " | "
+interval=once
+
+[uptime]
+color=#ff0000
+command=echo "$($HOME/uptime.sh)"
+interval=repeat
+
+[uptime_sep]
+command=echo " 🕒 |"
 interval=once
