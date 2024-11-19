@@ -60,7 +60,7 @@ command=echo "$($HOME/cpu.sh) "
 interval=repeat
 
 [usedcpu_clickable]
-full_text=🔲
+full_text=🔥
 command=alacritty -e btop
 interval=0
 
