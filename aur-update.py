@@ -93,7 +93,7 @@ if args.cache_updates and block_button in [2, 3]:
         updates = os.environ['_update_cache']
     else:
         updates = 'no updates cached'
-    sp.call(['notify-send', 'AUR updates', updates or 'up to date'])
+    #sp.call(['notify-send', 'AUR updates', updates or 'up to date'])
 
 # get list of foreign packages -- assumed to be from the AUR
 packages = sp.check_output(['pacman', '-Qm']).decode('utf8')
@@ -118,7 +118,7 @@ for pkg in installed_version.keys():
 n_updates = len(updates)
 msg = ''
 if n_updates > 0:
-    msg = "<span color='{0}'>{1} </span>".format(args.update_color, n_updates)
+    msg = "<span color='{0}'>{1}</span>".format(args.update_color, n_updates)
 elif not args.quiet:
     msg = 'AUR up to date'
 
