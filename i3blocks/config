@@ -50,6 +50,12 @@ IGNORE=root vidyodesktop
 CACHE_UPDATES=0
 #FORCE_IPV4=1
 
+[aur-update_clickable]
+color=#ffb900
+full_text= 
+command=alacritty -e yay
+interval=0
+
 [aur-update_sep]
 command=echo " | "
 interval=once
