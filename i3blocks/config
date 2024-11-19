@@ -28,7 +28,7 @@ interval=once
 [pkgs]
 color=#0097ff
 command=echo "$(checkupdates | wc -l) "
-interval=43200
+interval=repeat
 
 [pkgs_clickable]
 full_text=📦
@@ -39,16 +39,10 @@ interval=0
 command=echo " | "
 interval=once
 
-[aur-update]
-command=$HOME/aur-update.py
-markup=pango
-format=json
-interval=43200
-UPDATE_COLOR=#ffb900
-QUIET=1
-IGNORE=root vidyodesktop
-CACHE_UPDATES=0
-#FORCE_IPV4=1
+[aur-updates]
+command=$HOME/aur-updates.sh
+interval=repeat
+color=#ffb900
 
 [aur-update_clickable]
 color=#ffb900
