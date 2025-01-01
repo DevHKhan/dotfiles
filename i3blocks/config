@@ -28,7 +28,7 @@ interval=once
 [pkgs]
 color=#0097ff
 command=echo "$(checkupdates | wc -l) "
-interval=repeat
+interval=300
 
 [pkgs_clickable]
 full_text=📦
@@ -41,7 +41,7 @@ interval=once
 
 [aur-updates]
 command=$HOME/aur-updates.sh
-interval=repeat
+interval=300
 color=#ffb900
 
 [aur-update_clickable]
