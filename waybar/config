@@ -1,0 +1,113 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 35, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 3, // Gaps between modules (px)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock",
+        "user"
+    ],
+    "modules-right": [
+        "wireplumber",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "hyprland/language",
+        "tray"
+    ],
+    // Modules configuration
+    "hyprland/workspaces": {
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "🎧",
+            "2": "🏫",
+            "3": "∫",
+            "4": "✅",
+            "5": "$",
+            "6": "🌎",
+            "7": "💻",
+            "8": "💬"
+        }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true
+    },
+    "user": {
+        "format": "{user} <span color='#a34843'>↑</span> {work_d} days, {work_H}:{work_M}:{work_S}",
+        "interval": 1
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "hyprland/language": {"format": "<span color='#ff5d00'> </span> {}"},
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "<span color='#439ea3'> </span> {:%b %D %r %a}",
+        "interval": 1
+    },
+    "cpu": {
+        "format": "<span color='#ff0000'> </span> {usage}%"
+    },
+    "memory": {
+        "format": "<span color='#fff700'> </span> {}%"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "<span color='#cc00ff'>{icon} </span> {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "network": {
+        "format-ethernet": "<span color='#00ffff'> </span> {ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+    "wireplumber": {
+        "format": "<span color='#00ff80'>{icon} </span> {volume}%",
+        "format-muted": "",
+        "on-click": "pavucontrol",
+        "format-icons": ["", "", ""],
+        "node-type": "Audio/Sink",
+        "tooltip": true,
+        "tooltip-format": "{node_name}",
+        "scroll-step": 1.0
+    },
+    "custom/power": {
+        "format" : "⏻",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		}
+    }
+}
