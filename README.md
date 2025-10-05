@@ -1,4 +1,3 @@
-
 # About DevHKhan/dotfiles
 
 This is my collection of configuration files that I have on my Arch Linux system. For context, I run a system that uses the i3 window manager, the fish shell, and the Neovim text editor.
@@ -15,11 +14,11 @@ Like many i3 configurations, my setup features ten workspaces.
 
 ### Workspace 1
 
-My first workspace is labeled "1: 🎧." I use this workspace whenever I want to relax and do some fun things. For example, I will often have YouTube open here, and I often play chess on this workspace. Anything of that nature will typically be found in this workspace.
+My first workspace is labeled "1: 🎧." I use this workspace whenever I want to relax and do some fun things. For example, I will often watch YouTube and play chess here. Anything of that nature will typically be found in this workspace.
 
 ### Workspace 2
 
-My second workspace is labeled "2: 🏫." I use this workspace for my school assignments and other things related to school.
+My second workspace is labeled "2: 🏫." I use this workspace for anything related to school and academics.
 
 ### Workspace 3
 
@@ -51,7 +50,7 @@ My ninth workspace is labeled "9." I use this workspace for miscellaneous things
 
 ### Workspace 10
 
-My tenth workspace is labeled "10." Just like with workspace 9, I use this workspace for miscellaneous things.
+My tenth workspace is labeled "10." This is also miscellaneous.
 
 ## Status Bar
 
@@ -59,10 +58,10 @@ I use the [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status
 
 Below, I have listed the sections of my status bar from left to right.
 
-* Disk Space
-* Pacman Updates
-* CPU Usage
-* Memory Usage
-* Date and Time
-* Uptime
-* Random Wallpaper Selector
+- Disk Space
+- Pacman Updates
+- CPU Usage
+- Memory Usage
+- Date and Time
+- Uptime
+- Random Wallpaper Selector
