@@ -1,6 +1,6 @@
 * {
-  font-family: "Iosevka Nerd Font", monospace;
-  font-size: 14px;
+  font-family: "UbuntuMono Nerd Font", monospace;
+  font-size: 15px;
   font-weight: bold;
   margin: 0;
   padding: 0;
@@ -53,7 +53,7 @@ button:hover {
 
 #workspaces button {
   padding: 0 5px;
-  background-color: transparent;
+  background-color: #5f676a;
   color: #ffffff;
 }
 
@@ -92,9 +92,9 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
-#mpd {
+#mpd,
+#custom-wallpaper {
   padding: 0 7px;
-  color: #ffffff;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -161,11 +161,11 @@ button:hover {
 }
 
 #workspaces {
-  margin: 0 6px;
+  margin: 0 10px;
 }
 
 #workspaces button.active {
-  background-color: #1ca000;
+  background-color: #6495ed;
 }
 
 #workspaces button.urgent {
