@@ -4,15 +4,14 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 35, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 3, // Gaps between modules (px)
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/window"
+        "hyprland/window",
+        "custom/wallpaper"
     ],
     "modules-center": [
         "clock",
-        "custom/separator",
         "user"
     ],
     "modules-right": [
@@ -22,7 +21,6 @@
         "memory",
         "temperature",
         "hyprland/language",
-        "custom/wallpaper",
         "tray"
     ],
     // Modules configuration
@@ -51,12 +49,12 @@
     },
     "hyprland/window": {
         "format": "<span color='#00ffff'>{}</span>",
-        "max-length": 75,
+        "max-length": 50,
         "separate-outputs": true,
         "tooltip-format": "{}"
     },
     "user": {
-        "format": "<span color='#ff0000'>{user}</span> | <span color='#fff700'>  {work_d} days, {work_H}:{work_M}:{work_S}</span>",
+        "format": "<span color='#ff0000'>{user}</span> <span color='#fff700'>   {work_d} days, {work_H}:{work_M}:{work_S}</span>",
         "interval": 1
     },
     "tray": {
@@ -70,7 +68,7 @@
     "hyprland/language": {"format": "<span color='#ff5d00'> {}</span>"},
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "<span color='#cc00ff'>  {:%b %e, %Y %a}</span>",
+        "format": "<span color='#cc00ff'>  {:%b %e, %Y %a %r}</span>",
         "interval": 1
     },
     "cpu": {
@@ -95,9 +93,9 @@
     },
     "wireplumber": {
         "format": "<span color='#00ff80'>{icon}  {volume}%</span>",
-        "format-muted": "",
+        "format-muted": "",
         "on-click": "pavucontrol",
-        "format-icons": ["", "", ""],
+        "format-icons": ["", "", ""],
         "node-type": "Audio/Sink",
         "tooltip": true,
         "tooltip-format": "{node_name}",

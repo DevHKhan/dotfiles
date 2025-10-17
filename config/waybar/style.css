@@ -1,5 +1,5 @@
 * {
-  font-family: "UbuntuMono Nerd Font", monospace;
+  font-family: "UbuntuMono Nerd Font";
   font-size: 15px;
   font-weight: bold;
   margin: 0;
@@ -89,11 +89,13 @@ button:hover {
 #keyboard-state,
 #tray,
 #mode,
+#window,
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
 #mpd,
-#custom-wallpaper {
+#custom-wallpaper,
+#language {
   padding: 0 7px;
 }
 
