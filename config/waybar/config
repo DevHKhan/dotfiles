@@ -108,7 +108,7 @@
     },
     "custom/wallpaper": {
       "format": "<span color='#03fc6f'>  Random</span>",
-      "on-click": "wpaperd -d",
+      "on-click": "wpaperctl next",
       "tooltip": false
     }
 }
